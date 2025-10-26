@@ -4,7 +4,7 @@
 ### 2) Runtime stage: copy the built jar into a smaller JRE image
 
 # ---- Build stage ----
-FROM maven:3.9-jdk-17 AS builder
+FROM maven:3.9.11-eclipse-temurin-17-alpine AS builder
 WORKDIR /workspace
 
 # Copy only the files required for a build and run Maven (this leverages Docker layer caching)
